@@ -1,0 +1,40 @@
+<mat-sidenav-container>
+
+  <mat-sidenav #drawer mode="push">
+
+<!--
+    <mat-toolbar color="primary">
+      <mat-button-toggle (click)="drawer.toggle()" class="md-icon-button sidenav-toggle-button" [hidden]="!drawer.opened">
+        <mat-icon aria-label="Menu" class="material-icons">close</mat-icon>
+      </mat-button-toggle>
+    </mat-toolbar>
+-->
+
+    <mat-nav-list>
+      <a mat-list-item [routerLink]="['/components']" (click)="drawer.toggle()">
+        <mat-icon mat-list-icon>account_balance</mat-icon>
+        <span class="title" mat-line>Components</span>
+        <span mat-line class="secondary">Components</span>
+      </a>
+      <a mat-list-item [routerLink]="['/assignments']" (click)="drawer.toggle()">
+        <mat-icon mat-list-icon>account_balance</mat-icon>
+        <span class="title" mat-line>Assignments</span>
+        <span mat-line class="secondary">Assignments</span>
+      </a>
+    </mat-nav-list>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+
+    <mat-toolbar color="primary">
+      <button mat-icon-button (click)="drawer.toggle()" [hidden]="!drawer.opened">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </mat-toolbar>
+
+    <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

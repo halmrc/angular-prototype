@@ -1,0 +1,7 @@
+.comp-detail {
+  border: 10px;
+}
+
+::ng-deep .mat-grid-tile .mat-figure {
+  display: block;
+}
